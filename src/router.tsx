@@ -5,7 +5,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <h1>Formulário de simulação</h1>,
+        element: (
+          <>
+            <h1>Formulário de simulação</h1>
+          </>
+        ),
       },
       {
         path: '/resultado',
