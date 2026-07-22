@@ -9,13 +9,13 @@ import {
 
 import type { FormStepProps } from '@/components/features/Simulation/FormStep'
 
-export const simulationFormSteps: FormStepProps[] = [
+export const simulationFormSteps = [
   {
     id: 'income',
     icon: PiggyBank,
     title: 'Renda Mensal Bruta',
     question:
-      'Qunato é depositado na sua conta todo mês (somando todas as fontes)?',
+      'Quanto é depositado na sua conta todo mês (somando todas as fontes)?',
     inputProps: {
       placeholder: 'Ex: R$ 5.000,00',
       prefix: 'R$',
@@ -84,4 +84,9 @@ export const simulationFormSteps: FormStepProps[] = [
       emojiIcon: '⚡',
     },
   },
-]
+] satisfies FormStepProps[]
+
+export type SimulationFormData = Record<
+  (typeof simulationFormSteps)[number]['id'],
+  string
+>
